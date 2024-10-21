@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css"
+        integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Nike x Future</title>
+</head>
+
+<body>
+    <div class="swiper">
+        <nav>
+            <a href="#" class="active">Concepts</a>
+            <a href="#">Customize</a>
+            <a href="#">Store</a>
+            <a href="#" style="margin-left: auto;"><i class="ri-search-line"></i></a>
+            <a href="#">Profile</a>
+            <a href="#"><i class="ri-shopping-bag-fill"></i></a>
+        </nav>
+
+        <div class="swiper-wrapper">
+            <!-- FIRST SLIDE / MAIN -->
+            <div class="swiper-slide" style="background: linear-gradient(to bottom, #781b25, #121826);">
+                <h2>FUTURE</h2>
+                <h3 class="faded-text">NIKE</h3>
+                <div class="info">
+                    <p>Year 2075</p>
+                    <span>@ Armour <br> meets style</span>
+                    <p>FUTURE SOLDIER</p>
+                    <span>Stealth, functional <br> and futuristic</span>
+                </div>
+                <div class="pricing">
+                    <p>color: </p>
+                    <span>Black Blood</span>
+
+                    <h3>$1499.00</h3>
+                    <div class="btn-block">
+                        <button class="light-btn">Join waitlist</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <img src="./assets/blackwbg.png" alt="blacksoldier" class="main-img">
+            </div>
+
+            <!-- SECOND SLIDE -->
+            <div class="swiper-slide" style="background: linear-gradient(to bottom, #6930c5, #001035);">
+                <h2>FUTURE</h2>
+                <h3 class="faded-text">NIKE</h3>
+                <div class="info">
+                    <p>Year 2077</p>
+                    <span>@ Future <br> meets fashion</span>
+                    <p>GEN X ALPHA</p>
+                    <span>Straight outta <br> CYBERPUNK</span>
+                </div>
+                <div class="pricing">
+                    <p>color: </p>
+                    <span>Black Blood</span>
+
+                    <h3>$1499.00</h3>
+                    <div class="btn-block">
+                        <button class="light-btn">Join waitlist</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <img src="./assets/neonwbg.png" alt="cyberpunk" class="">
+            </div>
+
+
+            <!-- Third SLIDE -->
+            <div class="swiper-slide" style="background: linear-gradient(to bottom, #ffa81b, #a18039);">
+                <h2>FUTURE</h2>
+                <h3 class="faded-text">NIKE</h3>
+                <div class="info">
+                    <p>Year 2070</p>
+                    <span>@ Royalty <br> meets style</span>
+                    <p>CREED JACKET</p>
+                    <span>Royal, Commander <br> and Admirable</span>
+                </div>
+                <div class="pricing">
+                    <p>color: </p>
+                    <span>White gold</span>
+
+                    <h3>$1999.00</h3>
+                    <div class="btn-block">
+                        <button class="light-btn">Join waitlist</button>
+                        <button class="btn">Buy Now</button>
+                    </div>
+                </div>
+                <img src="./assets/whitewbg.png" alt="assasincreed" class="main-img">
+            </div>
+
+
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-thumbs">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" style="background: #000;">
+                    <img src="./assets/blackwbg.png" alt="">
+                </div>
+                <div class="swiper-slide" style="background: #0c1447;">
+                    <img src="./assets/neonwbg.png" alt="">
+                </div>
+                <div class="swiper-slide" style="background: #fff;">
+                    <img src="./assets/whitewbg.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll">Scroll down <i class="ri-arrow-down-s-line"></i></div>
+        <div class="social">
+            <a href="#">IN</a>
+            <a href="#">FB</a>
+            <a href="#">TW</a>
+        </div>
+
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+            integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script>
+
+            var swiper = new Swiper('.swiper', {
+                loop: true,
+                spaceBetween: 0,
+                mousewheel: true,
+                speed: 1200,
+                effect: 'coverflow',
+                direction: 'vertical',
+                coverflowEffect: {
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 10,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                thumbs: {
+                    swiper: {
+                        el: '.swiper-thumbs',
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                    }
+                },
+                on: {
+
+                    slideChangeTransitionStart: function () {
+                        gsap.from(
+                            '.swiper-slide-active h2',
+                            { x: -200, opacity: 0, duration: 1, delay: 0.5 }
+                        );
+
+                        gsap.from(
+                            '.info p , .info span',
+                            { y: 10, opacity: 0, stagger: 0.1, delay: 0.7 }
+                        );
+
+                        gsap.from(
+                            '.pricing p , .pricing span , .pricing h3, .btn-block',
+                            { y: 10, opacity: 0, stagger: 0.1, delay: 0.7 }
+                        );
+
+                        gsap.from('.main-img', {
+                            y: 50, opacity: 0, duration: 1, delay: 0.5,
+                        });
+
+                        gsap.from('.swiper-thumbs', {
+                            y: 20, opacity: 0, delay: 0.5
+                        });
+
+                    },
+                }
+            });
+
+            //ON INITIAL LOADING
+            gsap.from('.faded-text',
+                {
+                    scale: 2,
+                    position: 'fixed',
+                    top: '70%',
+                    left: '-50%',
+                    color: 'white',
+                    xPercent: 50,
+                    yPercent: -70,
+                    duration: 1.5,
+                }
+            );
+
+            gsap.from(
+                '.swiper-slide-active h2',
+                { x: -200, opacity: 0, duration: 1, delay: 1 }
+            );
+
+            gsap.from(
+                '.info p , .info span',
+                { y: 10, opacity: 0, stagger: 0.1, delay: 1 }
+            );
+
+            gsap.from(
+                '.pricing p , .pricing span , .pricing h3, .btn-block',
+                { y: 10, opacity: 0, stagger: 0.1, delay: 1 }
+            );
+
+            gsap.from('.main-img', {
+                y: 100, opacity: 0, duration: 1, delay: 1
+            });
+
+            gsap.from('.swiper-thumbs', {
+                y: 20, opacity: 0, delay: 1
+            })
+
+        </script>
+</body>
+
+</html>
